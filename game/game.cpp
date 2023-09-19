@@ -5,16 +5,16 @@ using namespace std;
 enum enchoise {zero, stone, paper, scissor};
 struct stgame_result
 {
-	int rounds;
-	int player_won_times;
-	int computer_won_times;
-	int draw_times;
+	int rounds =0 ;
+	int player_won_times = 0;
+	int computer_won_times = 0;
+	int draw_times = 0;
 	string final_winner;
 };
 struct stround_result
 {
-	int player_choice;
-	int computer_choice;
+	int player_choice = 0;
+	int computer_choice = 0;
 	string winner;
 };
 int read_num(string msg)
@@ -96,21 +96,21 @@ void show_round_result(stround_result &round_result, int round_number, stgame_re
 	cout << "player choice : "<< convert_number_to_string(round_result.player_choice) << endl;
 	cout << "computer choice : " << convert_number_to_string(round_result.computer_choice) << endl;
 	cout << "round winnner : "<< round_result.winner << endl;
-	if (round_result.winner == "player")
+	if (round_result.winner == "draw")
 	{
-		system("color 1f");
-		game_result.player_won_times++;
+		system("color 20");
+		game_result.draw_times++;
 	}
 	else if (round_result.winner == "computer")
 	{
-		system("color 4e");
+		system("color 40");
 		game_result.computer_won_times++;
 	}
-	/*else if (round_result.winner == "draw")
+	else if (round_result.winner == "player")
 	{
-		system("COLOR 6");
-		game_result.draw_times++;
-	}*/
+		system("COLOR 60");
+		game_result.player_won_times++;
+	}
 	game_result.rounds++;
 }
 stround_result play_round(int i)
@@ -162,6 +162,7 @@ int main(void)
 	bool one_more_game= 0;
 	do
 	{
+		system("color 0");
 		system("cls");
 		game_result = play_game(rounds());
 		show_all_game_result(game_result);
