@@ -160,13 +160,13 @@ int main(void)
 	stgame_result game_result;
 	srand((unsigned)time(NULL));
 	bool one_more_game= 0;
-	//while (play_again()
-	//{
+	do
+	{
 		system("cls");
 		game_result = play_game(rounds());
 		show_all_game_result(game_result);
 		one_more_game = play_again();
 
-	//} while (one_more_game);
+	} while (one_more_game);
 	return (0);
 }
