@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cstdlib>
-#include <cstring>
 using namespace std;
 enum enchoise {zero, stone, paper, scissor};
 struct stgame_result
