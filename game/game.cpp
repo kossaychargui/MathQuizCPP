@@ -21,7 +21,7 @@ int read_num(string msg)
 {
 	int num;
 	cout << msg;
-	cin >> msg;
+	cin >> num;
 	return (num);
 }
 int random_num(int from, int to)
@@ -34,7 +34,7 @@ int rounds(void)
 	do
 	{
 		rounds = read_num("How many round 1 to 10:");
-	} while (rounds <= 10);
+	} while (rounds > 10 || rounds < 1);
 	return (rounds);
 }
 int player_choice(void)
