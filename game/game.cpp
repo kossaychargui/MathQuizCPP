@@ -40,8 +40,11 @@ int rounds(void)
 int player_choice(void)
 {
 	int choice;
+	do
+	{
 	cout << "\nYour choice : [1]:Stone, [2]: Paper, [3]: scissor ?";
 	cin >> choice;
+	}while (choice > 3 || choice <1);
 	return (choice);
 }
 bool play_again(void)
@@ -49,10 +52,7 @@ bool play_again(void)
 	char c;
 	cout << "do want to play again: [y]/[n]:";
 	cin >> c;
-	if (c == 'y' || c == 'Y')
-		return 1;
-	else
-		return 0;
+	return (c == 'y' || c == 'Y');
 }
 string winner(int player, int computer)
 {
