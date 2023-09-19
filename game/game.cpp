@@ -58,23 +58,23 @@ string winner(int player, int computer)
 {
 	if(player == computer)
 		return ("draw");
-	if (player == 1)
+	if (player == stone)
 	{
-		if (computer == 2)
+		if (computer == paper)
 			return ("computer");
 		else
 			return ("player");
 	}
-	else if (player == 2)
+	else if (player == paper)
 	{
-		if (computer == 1)
+		if (computer == stone)
 			return ("player");
 		else
 			return ("computer");
 	}
 	else
 	{
-		if (computer == 1)
+		if (computer == stone)
 			return ("computer");
 		else
 			return ("player");
