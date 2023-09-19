@@ -65,7 +65,7 @@ string winner(int player, int computer)
 		else
 			return ("player");
 	}
-	else if (player = 2)
+	else if (player == 2)
 	{
 		if (computer == 1)
 			return ("player");
@@ -98,19 +98,19 @@ void show_round_result(stround_result &round_result, int round_number, stgame_re
 	cout << "round winnner : "<< round_result.winner << endl;
 	if (round_result.winner == "player")
 	{
-		system("COLOR [2]");
+		system("color 1f");
 		game_result.player_won_times++;
 	}
 	else if (round_result.winner == "computer")
 	{
-		system("COLOR [C]");
+		system("color 4e");
 		game_result.computer_won_times++;
 	}
-	else
+	/*else if (round_result.winner == "draw")
 	{
-		system("COLOR [6]");
+		system("COLOR 6");
 		game_result.draw_times++;
-	}
+	}*/
 	game_result.rounds++;
 }
 stround_result play_round(int i)
