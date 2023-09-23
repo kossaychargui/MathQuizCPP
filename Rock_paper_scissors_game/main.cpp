@@ -2,6 +2,14 @@
 #include <cstdlib>
 using namespace std;
 enum enchoise {zero, stone, paper, scissor};
+/**
+ * struct stgame_result - struct that holds the game result to show later
+ * @rounds: number of rounds
+ * @player_won_times: player won times
+ * @computer_wontimes: computer won times
+ * @draw_times: draw times
+ * @winner: string holds the winner of the game
+ */
 struct stgame_result
 {
 	int rounds =0 ;
@@ -10,12 +18,23 @@ struct stgame_result
 	int draw_times = 0;
 	string final_winner;
 };
+/**
+ * struct stround_result - struct that holds the round result
+ * @player_choice: player choice
+ * @computer_choice : computer choice
+ * @winner: winner of the round
+ */
 struct stround_result
 {
 	int player_choice = 0;
 	int computer_choice = 0;
 	string winner;
 };
+/**
+ * read_num - function that shows a message and reads an integer
+ * @msg: message to show
+ * Return: the integer
+ */
 int read_num(string msg)
 {
 	int num;
